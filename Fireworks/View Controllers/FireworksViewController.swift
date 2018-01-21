@@ -117,8 +117,9 @@ class FireworksViewController: UIViewController {
             chemicalFormulaLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
             chemicalFormulaLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
             
-            autoPlayButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
-            autoPlayButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
+            autoPlayButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
+            autoPlayButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            autoPlayButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
     
@@ -141,8 +142,8 @@ class FireworksViewController: UIViewController {
     }
     
     @objc private func toggleFireworksShow() {
-        isShowOn ? fireworksScene?.startFireworkShow() : fireworksScene?.endFireworkShow()
-        autoPlayButton.setTitle(isShowOn ? "Stop" : "Auto Play", for: .normal)
+        isShowOn ? fireworksScene?.endFireworkShow() : fireworksScene?.startFireworkShow()
+        autoPlayButton.setTitle(isShowOn ? "Auto Play" : "Stop", for: .normal)
         isShowOn = !isShowOn
     }
     

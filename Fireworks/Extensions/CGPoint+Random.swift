@@ -10,7 +10,9 @@ import CoreGraphics
 
 extension CGPoint {
     static func random(in size: CGSize) -> CGPoint {
-        return CGPoint(x: CGFloat(arc4random_uniform(UInt32(size.width))),
-                       y: CGFloat(arc4random_uniform(UInt32(size.height))))
+        let widthSegment = size.width / 4
+        let heighSegment = size.height / 4
+        return CGPoint(x: CGFloat(arc4random_uniform(UInt32(widthSegment * 3))) + widthSegment / 2,
+                       y: CGFloat(arc4random_uniform(UInt32(heighSegment * 3))) + widthSegment / 2)
     }
 }

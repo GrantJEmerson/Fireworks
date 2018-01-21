@@ -6,6 +6,7 @@
 //  Copyright © 2018 Grant Emerson. All rights reserved.
 //
 
+import UIKit
 import AVKit
 import SpriteKit
 import GameplayKit
@@ -24,7 +25,7 @@ class FireworksScene: SKScene {
     
     public weak var fireworksDelegate: FireworksSceneDelegate?
     
-    private var sparkFireworkShowEmitter: SKEmitterNode?
+    private var fireworkShowSparkEmitterNode: SKEmitterNode?
     
     private var sparkEmitterNodes = [UITouch: SKEmitterNode]()
     
@@ -108,8 +109,7 @@ class FireworksScene: SKScene {
     private func explodeFirework(_ firework: Firework,
                                  at point: CGPoint, withColor color: UIColor,
                                  withScaleFactor scaleFactor: CGFloat) {
-        guard let firework = fireworksDelegate?.currentFirework,
-            let fireworkEmitter = SKEmitterNode(fileNamed: firework.name) else { return }
+        guard let fireworkEmitter = SKEmitterNode(fileNamed: firework.name) else { return }
         fireworkEmitter.particlePosition = point
         fireworkEmitter.particleColorSequence = nil
         fireworkEmitter.particleScale *= scaleFactor
@@ -117,7 +117,7 @@ class FireworksScene: SKScene {
         let fireworkSound = SKAction.playSoundFileNamed(firework.name, waitForCompletion: false)
         let fireworkSequence = SKAction.sequence([
             SKAction.run({ self.addChild(fireworkEmitter) }),
-            SKAction.wait(forDuration: 2000),
+            SKAction.wait(forDuration: 2.5),
             SKAction.run { fireworkEmitter.removeFromParent() }
         ])
         run(fireworkSound)
@@ -142,48 +142,51 @@ class FireworksScene: SKScene {
         cloud.run(swayAction)
     }
     
+    private func addSparkEmitter() {
+        self.fireworkShowSparkEmitterNode = SKEmitterNode(fileNamed: "SparkEmitter")
+        self.addChild(fireworkShowSparkEmitterNode!)
+        fireworkShowSparkEmitterNode?.particlePosition = .random(in: self.frame.size)
+    }
+    
     // MARK: Public Functions
     
     public func startFireworkShow() {
-        let waitAction = SKAction.wait(forDuration: Double(arc4random_uniform(300))/100)
         let addAction = SKAction.run { [weak self] in
             guard let `self` = self else { return }
-            let sparkEmitterNode = SKEmitterNode(fileNamed: "SparkEmitter")
-            self.addChild(sparkEmitterNode!)
-            sparkEmitterNode?.particlePosition = .random(in: self.frame.size)
-            self.sparkFireworkShowEmitter = sparkEmitterNode
+            self.addSparkEmitter()
             self.sparkSoundPlayer.play()
         }
-        let moveAction = SKAction.repeat(SKAction.run { [weak self] in
-            guard let `self` = self else { return }
-            self.sparkFireworkShowEmitter?.run(SKAction.move(to: .random(in: self.frame.size), duration: 0.2))
-        }, count: 4)
+        let moveSequence = SKAction.sequence([
+            SKAction.run { [weak self] in
+                guard let `self` = self else { return }
+                let randomPoint = CGPoint.random(in: self.frame.size)
+                UIView.animate(withDuration: 0.75) {
+                    self.fireworkShowSparkEmitterNode?.particlePosition.x = randomPoint.x
+                    self.fireworkShowSparkEmitterNode?.particlePosition.y = randomPoint.y
+                }
+            },
+            SKAction.wait(forDuration: 0.75)
+        ])
+        let moveAction = SKAction.repeat(moveSequence, count: 4)
         let explodeAction = SKAction.run { [weak self] in
             guard let `self` = self,
-                let explosionPoint = self.sparkFireworkShowEmitter?.particlePosition else { return }
-            self.sparkFireworkShowEmitter?.removeFromParent()
-            self.sparkFireworkShowEmitter = nil
-            self.explodeFirework(Firework.defaultSet[Int(arc4random_uniform(3))],
+                let explosionPoint = self.fireworkShowSparkEmitterNode?.particlePosition else { return }
+            self.fireworkShowSparkEmitterNode?.removeFromParent()
+            self.fireworkShowSparkEmitterNode = nil
+            self.sparkSoundPlayer.pause()
+            self.explodeFirework(Firework.defaultSet[Int(arc4random_uniform(4))],
                                  at: explosionPoint,
                                  withColor: .random,
                                  withScaleFactor: .randomDecimal)
-            
         }
-        let fireworksSequence = SKAction.sequence([waitAction, addAction, moveAction, explodeAction]).repeated()
+        let fireworksSequence = SKAction.sequence([addAction, moveAction, explodeAction]).repeated()
         run(fireworksSequence)
     }
     
     public func endFireworkShow() {
         removeAllActions()
         sparkSoundPlayer.pause()
-        sparkFireworkShowEmitter?.removeFromParent()
-        sparkFireworkShowEmitter = nil
+        fireworkShowSparkEmitterNode?.removeFromParent()
+        fireworkShowSparkEmitterNode = nil
     }
 }
-
-// Firwork Show
-
-// Every 0.5 - 3 seconds new firework starts (randomized
-// fireworks travel to random new locations for duration 0.2 seconds for 0.8 seconds
-// then explode firework at ending location with
-

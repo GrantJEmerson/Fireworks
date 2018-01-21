@@ -18,11 +18,11 @@ class ColorPicker: UIView {
     
     public weak var delegate: ColorPickerDelegate?
     
-    open var currentColor: UIColor?
+    open var currentColor: UIColor? = .white
     
-    private var currentRedValue: CGFloat = 0
-    private var currentGreenValue: CGFloat = 0
-    private var currentBlueValue: CGFloat = 0
+    private var currentRedValue: CGFloat = 1
+    private var currentGreenValue: CGFloat = 1
+    private var currentBlueValue: CGFloat = 1
     
     private let SliderContainerView: () -> (UIView) = {
         let view = UIView()
