@@ -8,20 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		5539FBB82012870700BACEBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBB72012870700BACEBA /* AppDelegate.swift */; };
-		5539FBBA2012870700BACEBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBB92012870700BACEBA /* ViewController.swift */; };
-		5539FBBD2012870700BACEBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5539FBBB2012870700BACEBA /* Main.storyboard */; };
 		5539FBBF2012870700BACEBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5539FBBE2012870700BACEBA /* Assets.xcassets */; };
 		5539FBC22012870700BACEBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5539FBC02012870700BACEBA /* LaunchScreen.storyboard */; };
+		5539FBCA2012871900BACEBA /* SizingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBC92012871900BACEBA /* SizingView.swift */; };
+		5539FBD02012873800BACEBA /* UIView+constrainToEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCB2012873700BACEBA /* UIView+constrainToEdges.swift */; };
+		5539FBD12012873800BACEBA /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCC2012873700BACEBA /* ColorPicker.swift */; };
+		5539FBD22012873800BACEBA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCD2012873700BACEBA /* GradientView.swift */; };
+		5539FBD32012873800BACEBA /* UIView+addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCE2012873700BACEBA /* UIView+addSubviews.swift */; };
+		5539FBD42012873800BACEBA /* ColorControlSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCF2012873800BACEBA /* ColorControlSlider.swift */; };
+		5539FBD6201289EE00BACEBA /* FireworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBD5201289EE00BACEBA /* FireworksViewController.swift */; };
+		5539FBD82012A34600BACEBA /* InstructionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBD72012A34600BACEBA /* InstructionsController.swift */; };
+		5539FBDA2012B78400BACEBA /* FireworkPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBD92012B78400BACEBA /* FireworkPickerController.swift */; };
+		5539FBDC2012B7BE00BACEBA /* Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBDB2012B7BE00BACEBA /* Firework.swift */; };
+		5539FBDE2012B92300BACEBA /* FireworksScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBDD2012B92300BACEBA /* FireworksScene.swift */; };
+		55F66D9B2013A30100C4D621 /* SparkEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66D9A2013A30100C4D621 /* SparkEmitter.sks */; };
+		55F66D9D2013D1CB00C4D621 /* Firework.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66D9C2013D1CB00C4D621 /* Firework.sks */; };
+		55F66DA12013D70900C4D621 /* SKAction+Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */; };
+		55F66DA32013DE6100C4D621 /* SizzlingSparkSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */; };
+		55F66DA52013F14100C4D621 /* FireworkSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DA42013F14100C4D621 /* FireworkSound.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5539FBB42012870700BACEBA /* Fireworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fireworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5539FBB72012870700BACEBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5539FBB92012870700BACEBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5539FBBC2012870700BACEBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5539FBBE2012870700BACEBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5539FBC12012870700BACEBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5539FBC32012870700BACEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5539FBC92012871900BACEBA /* SizingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizingView.swift; sourceTree = "<group>"; };
+		5539FBCB2012873700BACEBA /* UIView+constrainToEdges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constrainToEdges.swift"; sourceTree = "<group>"; };
+		5539FBCC2012873700BACEBA /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		5539FBCD2012873700BACEBA /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		5539FBCE2012873700BACEBA /* UIView+addSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+addSubviews.swift"; sourceTree = "<group>"; };
+		5539FBCF2012873800BACEBA /* ColorControlSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControlSlider.swift; sourceTree = "<group>"; };
+		5539FBD5201289EE00BACEBA /* FireworksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksViewController.swift; sourceTree = "<group>"; };
+		5539FBD72012A34600BACEBA /* InstructionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsController.swift; sourceTree = "<group>"; };
+		5539FBD92012B78400BACEBA /* FireworkPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworkPickerController.swift; sourceTree = "<group>"; };
+		5539FBDB2012B7BE00BACEBA /* Firework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firework.swift; sourceTree = "<group>"; };
+		5539FBDD2012B92300BACEBA /* FireworksScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksScene.swift; sourceTree = "<group>"; };
+		55F66D9A2013A30100C4D621 /* SparkEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkEmitter.sks; sourceTree = "<group>"; };
+		55F66D9C2013D1CB00C4D621 /* Firework.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Firework.sks; sourceTree = "<group>"; };
+		55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKAction+Repeat.swift"; sourceTree = "<group>"; };
+		55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SizzlingSparkSound.wav; sourceTree = "<group>"; };
+		55F66DA42013F14100C4D621 /* FireworkSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FireworkSound.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +83,22 @@
 			isa = PBXGroup;
 			children = (
 				5539FBB72012870700BACEBA /* AppDelegate.swift */,
-				5539FBB92012870700BACEBA /* ViewController.swift */,
-				5539FBBB2012870700BACEBA /* Main.storyboard */,
+				5539FBD5201289EE00BACEBA /* FireworksViewController.swift */,
+				5539FBD72012A34600BACEBA /* InstructionsController.swift */,
+				5539FBD92012B78400BACEBA /* FireworkPickerController.swift */,
+				5539FBDD2012B92300BACEBA /* FireworksScene.swift */,
+				55F66D9C2013D1CB00C4D621 /* Firework.sks */,
+				55F66D9A2013A30100C4D621 /* SparkEmitter.sks */,
+				5539FBC92012871900BACEBA /* SizingView.swift */,
+				5539FBCC2012873700BACEBA /* ColorPicker.swift */,
+				5539FBCF2012873800BACEBA /* ColorControlSlider.swift */,
+				5539FBCD2012873700BACEBA /* GradientView.swift */,
+				5539FBCE2012873700BACEBA /* UIView+addSubviews.swift */,
+				5539FBCB2012873700BACEBA /* UIView+constrainToEdges.swift */,
+				55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */,
+				5539FBDB2012B7BE00BACEBA /* Firework.swift */,
+				55F66DA42013F14100C4D621 /* FireworkSound.wav */,
+				55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */,
 				5539FBBE2012870700BACEBA /* Assets.xcassets */,
 				5539FBC02012870700BACEBA /* LaunchScreen.storyboard */,
 				5539FBC32012870700BACEBA /* Info.plist */,
@@ -123,9 +165,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F66D9D2013D1CB00C4D621 /* Firework.sks in Resources */,
 				5539FBC22012870700BACEBA /* LaunchScreen.storyboard in Resources */,
+				55F66DA32013DE6100C4D621 /* SizzlingSparkSound.wav in Resources */,
+				55F66DA52013F14100C4D621 /* FireworkSound.wav in Resources */,
+				55F66D9B2013A30100C4D621 /* SparkEmitter.sks in Resources */,
 				5539FBBF2012870700BACEBA /* Assets.xcassets in Resources */,
-				5539FBBD2012870700BACEBA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +181,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5539FBBA2012870700BACEBA /* ViewController.swift in Sources */,
+				5539FBD02012873800BACEBA /* UIView+constrainToEdges.swift in Sources */,
+				5539FBDE2012B92300BACEBA /* FireworksScene.swift in Sources */,
+				5539FBD22012873800BACEBA /* GradientView.swift in Sources */,
+				5539FBD12012873800BACEBA /* ColorPicker.swift in Sources */,
+				55F66DA12013D70900C4D621 /* SKAction+Repeat.swift in Sources */,
+				5539FBD82012A34600BACEBA /* InstructionsController.swift in Sources */,
+				5539FBDA2012B78400BACEBA /* FireworkPickerController.swift in Sources */,
+				5539FBD6201289EE00BACEBA /* FireworksViewController.swift in Sources */,
+				5539FBCA2012871900BACEBA /* SizingView.swift in Sources */,
+				5539FBD32012873800BACEBA /* UIView+addSubviews.swift in Sources */,
+				5539FBD42012873800BACEBA /* ColorControlSlider.swift in Sources */,
 				5539FBB82012870700BACEBA /* AppDelegate.swift in Sources */,
+				5539FBDC2012B7BE00BACEBA /* Firework.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5539FBBB2012870700BACEBA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5539FBBC2012870700BACEBA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5539FBC02012870700BACEBA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -277,6 +325,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZYV5DKZMAY;
 				INFOPLIST_FILE = Fireworks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CelebrityGames.Fireworks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZYV5DKZMAY;
 				INFOPLIST_FILE = Fireworks/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CelebrityGames.Fireworks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
