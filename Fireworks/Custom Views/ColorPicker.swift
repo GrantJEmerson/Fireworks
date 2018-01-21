@@ -116,7 +116,7 @@ class ColorPicker: UIView {
             blueSliderContainerView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
             colorView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            colorView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -10),
+            colorView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -12),
             colorView.widthAnchor.constraint(equalToConstant: 45),
             colorView.heightAnchor.constraint(equalToConstant: 45),
             

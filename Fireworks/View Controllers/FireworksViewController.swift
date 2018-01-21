@@ -70,6 +70,8 @@ class FireworksViewController: UIViewController {
         button.setTitleColor(.lightGray, for: .highlighted)
         button.backgroundColor = .themeColor
         
+        button.layer.borderColor = UIColor.lightGray.cgColor
+        button.layer.borderWidth = 2
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         
@@ -99,17 +101,20 @@ class FireworksViewController: UIViewController {
         
         fireworksView.constrainToEdges()
         
-        NSLayoutConstraint.activate([// 75 75
-            sizingView.heightAnchor.constraint(equalToConstant: 200),
+        var controlWidth = view.bounds.width / 4
+        if controlWidth > 200 { controlWidth = 200 }
+        
+        NSLayoutConstraint.activate([
+            sizingView.heightAnchor.constraint(equalToConstant: controlWidth),
             sizingView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             sizingView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
             
             colorPicker.leadingAnchor.constraint(equalTo: sizingView.trailingAnchor),
-            colorPicker.heightAnchor.constraint(equalToConstant: 200),
+            colorPicker.heightAnchor.constraint(equalToConstant: controlWidth),
             colorPicker.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
             colorPicker.widthAnchor.constraint(equalTo: colorPicker.heightAnchor),
             
-            fireworkSelectorButton.heightAnchor.constraint(equalToConstant: 200),
+            fireworkSelectorButton.heightAnchor.constraint(equalToConstant: controlWidth),
             fireworkSelectorButton.widthAnchor.constraint(equalTo: fireworkSelectorButton.heightAnchor),
             fireworkSelectorButton.leadingAnchor.constraint(equalTo: colorPicker.trailingAnchor, constant: 10),
             fireworkSelectorButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
@@ -119,7 +124,8 @@ class FireworksViewController: UIViewController {
             
             autoPlayButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             autoPlayButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            autoPlayButton.widthAnchor.constraint(equalToConstant: 100)
+            autoPlayButton.widthAnchor.constraint(equalToConstant: 100),
+            autoPlayButton.leadingAnchor.constraint(greaterThanOrEqualTo: fireworkSelectorButton.trailingAnchor)
         ])
     }
     

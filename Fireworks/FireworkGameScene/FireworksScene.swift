@@ -158,14 +158,22 @@ class FireworksScene: SKScene {
         }
         let moveSequence = SKAction.sequence([
             SKAction.run { [weak self] in
-                guard let `self` = self else { return }
+                guard let `self` = self,
+                    let currentX = self.fireworkShowSparkEmitterNode?.particlePosition.x,
+                    let currentY = self.fireworkShowSparkEmitterNode?.particlePosition.y else { return }
                 let randomPoint = CGPoint.random(in: self.frame.size)
-                UIView.animate(withDuration: 0.75) {
-                    self.fireworkShowSparkEmitterNode?.particlePosition.x = randomPoint.x
-                    self.fireworkShowSparkEmitterNode?.particlePosition.y = randomPoint.y
-                }
+                let xAddOn = (randomPoint.x - currentX) / 20
+                let yAddOn = (randomPoint.y - currentY) / 20
+                let smoothTranistion = SKAction.sequence([
+                    SKAction.run {
+                        self.fireworkShowSparkEmitterNode?.particlePosition.x += xAddOn
+                        self.fireworkShowSparkEmitterNode?.particlePosition.y += yAddOn
+                    },
+                    SKAction.wait(forDuration: 0.035)
+                ])
+                self.fireworkShowSparkEmitterNode?.run(SKAction.repeat(smoothTranistion, count: 20))
             },
-            SKAction.wait(forDuration: 0.75)
+            SKAction.wait(forDuration: 0.7)
         ])
         let moveAction = SKAction.repeat(moveSequence, count: 4)
         let explodeAction = SKAction.run { [weak self] in

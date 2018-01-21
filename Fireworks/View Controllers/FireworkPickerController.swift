@@ -55,6 +55,7 @@ extension FireworkPickerController: UITableViewDelegate {
         let firework = Firework.defaultSet[indexPath.row]
         cell.imageView?.image = firework.thumbNailImage
         cell.textLabel?.text = firework.name
+        cell.textLabel?.textColor = .white
         return cell
     }
     
