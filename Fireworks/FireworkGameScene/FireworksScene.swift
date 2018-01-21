@@ -95,7 +95,7 @@ class FireworksScene: SKScene {
     // MARK: Private Functions
     
     private func explodeFirework(at point: CGPoint) {
-        guard let firework = SKEmitterNode(fileNamed: "Firework") else { return }
+        guard let firework = SKEmitterNode(fileNamed: "Firework4") else { return }
         firework.particlePosition = point
         firework.particleColorSequence = nil
         firework.particleColor = fireworksDelegate?.fireworksColor ?? .orange

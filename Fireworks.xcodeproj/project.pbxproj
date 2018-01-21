@@ -22,10 +22,16 @@
 		5539FBDC2012B7BE00BACEBA /* Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBDB2012B7BE00BACEBA /* Firework.swift */; };
 		5539FBDE2012B92300BACEBA /* FireworksScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBDD2012B92300BACEBA /* FireworksScene.swift */; };
 		55F66D9B2013A30100C4D621 /* SparkEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66D9A2013A30100C4D621 /* SparkEmitter.sks */; };
-		55F66D9D2013D1CB00C4D621 /* Firework.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66D9C2013D1CB00C4D621 /* Firework.sks */; };
+		55F66D9D2013D1CB00C4D621 /* Classic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66D9C2013D1CB00C4D621 /* Classic.sks */; };
 		55F66DA12013D70900C4D621 /* SKAction+Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */; };
 		55F66DA32013DE6100C4D621 /* SizzlingSparkSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */; };
-		55F66DA52013F14100C4D621 /* FireworkSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DA42013F14100C4D621 /* FireworkSound.wav */; };
+		55F66DA52013F14100C4D621 /* Classic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DA42013F14100C4D621 /* Classic.wav */; };
+		55F66DA920141B3F00C4D621 /* Crackle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DA820141B3F00C4D621 /* Crackle.sks */; };
+		55F66DAB20141D0300C4D621 /* BigO.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DAA20141D0300C4D621 /* BigO.sks */; };
+		55F66DB320142F0C00C4D621 /* RapidFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DB220142F0C00C4D621 /* RapidFire.sks */; };
+		55F66DB72014383600C4D621 /* Crackle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DB62014383600C4D621 /* Crackle.wav */; };
+		55F66DB920143A1300C4D621 /* BigO.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DB820143A1300C4D621 /* BigO.wav */; };
+		55F66DBB20143B8E00C4D621 /* RapidFire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DBA20143B8E00C4D621 /* RapidFire.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,10 +52,16 @@
 		5539FBDB2012B7BE00BACEBA /* Firework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firework.swift; sourceTree = "<group>"; };
 		5539FBDD2012B92300BACEBA /* FireworksScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksScene.swift; sourceTree = "<group>"; };
 		55F66D9A2013A30100C4D621 /* SparkEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkEmitter.sks; sourceTree = "<group>"; };
-		55F66D9C2013D1CB00C4D621 /* Firework.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Firework.sks; sourceTree = "<group>"; };
+		55F66D9C2013D1CB00C4D621 /* Classic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Classic.sks; sourceTree = "<group>"; };
 		55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKAction+Repeat.swift"; sourceTree = "<group>"; };
 		55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SizzlingSparkSound.wav; sourceTree = "<group>"; };
-		55F66DA42013F14100C4D621 /* FireworkSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FireworkSound.wav; sourceTree = "<group>"; };
+		55F66DA42013F14100C4D621 /* Classic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Classic.wav; sourceTree = "<group>"; };
+		55F66DA820141B3F00C4D621 /* Crackle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Crackle.sks; sourceTree = "<group>"; };
+		55F66DAA20141D0300C4D621 /* BigO.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BigO.sks; sourceTree = "<group>"; };
+		55F66DB220142F0C00C4D621 /* RapidFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RapidFire.sks; sourceTree = "<group>"; };
+		55F66DB62014383600C4D621 /* Crackle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Crackle.wav; sourceTree = "<group>"; };
+		55F66DB820143A1300C4D621 /* BigO.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BigO.wav; sourceTree = "<group>"; };
+		55F66DBA20143B8E00C4D621 /* RapidFire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = RapidFire.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,28 +94,82 @@
 		5539FBB62012870700BACEBA /* Fireworks */ = {
 			isa = PBXGroup;
 			children = (
-				5539FBB72012870700BACEBA /* AppDelegate.swift */,
-				5539FBD5201289EE00BACEBA /* FireworksViewController.swift */,
-				5539FBD72012A34600BACEBA /* InstructionsController.swift */,
-				5539FBD92012B78400BACEBA /* FireworkPickerController.swift */,
-				5539FBDD2012B92300BACEBA /* FireworksScene.swift */,
-				55F66D9C2013D1CB00C4D621 /* Firework.sks */,
-				55F66D9A2013A30100C4D621 /* SparkEmitter.sks */,
+				55F66DB120141F6300C4D621 /* Supporting Files */,
+				55F66DB020141F4E00C4D621 /* View Controllers */,
+				55F66DAF20141F3900C4D621 /* FireworkGameScene */,
+				55F66DAD20141EFE00C4D621 /* Custom Views */,
+				55F66DAC20141EEE00C4D621 /* Extensions */,
+				55F66DAE20141F0800C4D621 /* Data Structures */,
+			);
+			path = Fireworks;
+			sourceTree = "<group>";
+		};
+		55F66DAC20141EEE00C4D621 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5539FBCE2012873700BACEBA /* UIView+addSubviews.swift */,
+				5539FBCB2012873700BACEBA /* UIView+constrainToEdges.swift */,
+				55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55F66DAD20141EFE00C4D621 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
 				5539FBC92012871900BACEBA /* SizingView.swift */,
 				5539FBCC2012873700BACEBA /* ColorPicker.swift */,
 				5539FBCF2012873800BACEBA /* ColorControlSlider.swift */,
 				5539FBCD2012873700BACEBA /* GradientView.swift */,
-				5539FBCE2012873700BACEBA /* UIView+addSubviews.swift */,
-				5539FBCB2012873700BACEBA /* UIView+constrainToEdges.swift */,
-				55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		55F66DAE20141F0800C4D621 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
 				5539FBDB2012B7BE00BACEBA /* Firework.swift */,
-				55F66DA42013F14100C4D621 /* FireworkSound.wav */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		55F66DAF20141F3900C4D621 /* FireworkGameScene */ = {
+			isa = PBXGroup;
+			children = (
+				5539FBDD2012B92300BACEBA /* FireworksScene.swift */,
+				55F66D9C2013D1CB00C4D621 /* Classic.sks */,
+				55F66DA42013F14100C4D621 /* Classic.wav */,
+				55F66DA820141B3F00C4D621 /* Crackle.sks */,
+				55F66DB62014383600C4D621 /* Crackle.wav */,
+				55F66DAA20141D0300C4D621 /* BigO.sks */,
+				55F66DB820143A1300C4D621 /* BigO.wav */,
+				55F66DB220142F0C00C4D621 /* RapidFire.sks */,
+				55F66DBA20143B8E00C4D621 /* RapidFire.wav */,
+				55F66D9A2013A30100C4D621 /* SparkEmitter.sks */,
 				55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */,
+			);
+			path = FireworkGameScene;
+			sourceTree = "<group>";
+		};
+		55F66DB020141F4E00C4D621 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5539FBD5201289EE00BACEBA /* FireworksViewController.swift */,
+				5539FBD72012A34600BACEBA /* InstructionsController.swift */,
+				5539FBD92012B78400BACEBA /* FireworkPickerController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		55F66DB120141F6300C4D621 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5539FBB72012870700BACEBA /* AppDelegate.swift */,
 				5539FBBE2012870700BACEBA /* Assets.xcassets */,
 				5539FBC02012870700BACEBA /* LaunchScreen.storyboard */,
 				5539FBC32012870700BACEBA /* Info.plist */,
 			);
-			path = Fireworks;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,12 +231,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F66D9D2013D1CB00C4D621 /* Firework.sks in Resources */,
+				55F66DB72014383600C4D621 /* Crackle.wav in Resources */,
+				55F66DAB20141D0300C4D621 /* BigO.sks in Resources */,
+				55F66D9D2013D1CB00C4D621 /* Classic.sks in Resources */,
+				55F66DBB20143B8E00C4D621 /* RapidFire.wav in Resources */,
 				5539FBC22012870700BACEBA /* LaunchScreen.storyboard in Resources */,
 				55F66DA32013DE6100C4D621 /* SizzlingSparkSound.wav in Resources */,
-				55F66DA52013F14100C4D621 /* FireworkSound.wav in Resources */,
+				55F66DB320142F0C00C4D621 /* RapidFire.sks in Resources */,
+				55F66DA52013F14100C4D621 /* Classic.wav in Resources */,
 				55F66D9B2013A30100C4D621 /* SparkEmitter.sks in Resources */,
+				55F66DA920141B3F00C4D621 /* Crackle.sks in Resources */,
 				5539FBBF2012870700BACEBA /* Assets.xcassets in Resources */,
+				55F66DB920143A1300C4D621 /* BigO.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZYV5DKZMAY;
-				INFOPLIST_FILE = Fireworks/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Fireworks/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CelebrityGames.Fireworks;
@@ -340,7 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZYV5DKZMAY;
-				INFOPLIST_FILE = Fireworks/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Fireworks/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CelebrityGames.Fireworks;
