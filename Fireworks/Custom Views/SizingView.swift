@@ -45,6 +45,7 @@ class SizingView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpSubviews()
+        backgroundColor = .clear
         translatesAutoresizingMaskIntoConstraints = false
         widthAnchor.constraint(equalTo: heightAnchor, multiplier: 0.3125).isActive = true
     }

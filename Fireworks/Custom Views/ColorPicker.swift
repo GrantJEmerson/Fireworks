@@ -36,7 +36,7 @@ class ColorPicker: UIView {
     
     private lazy var colorView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         view.layer.cornerRadius = 22.5
         view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -46,6 +46,7 @@ class ColorPicker: UIView {
     private lazy var redSlider: ColorControlSlider = {
         let slider = ColorControlSlider(frame: .zero, color: .red)
         slider.delegate = self
+        slider.value = 1
         slider.translatesAutoresizingMaskIntoConstraints = false
         return slider
     }()
@@ -53,6 +54,7 @@ class ColorPicker: UIView {
     private lazy var greenSlider: ColorControlSlider = {
         let slider = ColorControlSlider(frame: .zero, color: .green)
         slider.delegate = self
+        slider.value = 1
         slider.translatesAutoresizingMaskIntoConstraints = false
         return slider
     }()
@@ -60,6 +62,7 @@ class ColorPicker: UIView {
     private lazy var blueSlider: ColorControlSlider = {
         let slider = ColorControlSlider(frame: .zero, color: .blue)
         slider.delegate = self
+        slider.value = 1
         slider.translatesAutoresizingMaskIntoConstraints = false
         return slider
     }()
