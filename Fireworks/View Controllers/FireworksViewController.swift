@@ -61,11 +61,8 @@ class FireworksViewController: UIViewController {
         return label
     }()
     
-    private lazy var autoPlayButton: UIButton = {
-        
+    private let DefaultButton: () -> (UIButton) = {
         let button = UIButton()
-        
-        button.setTitle("Auto Play", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.setTitleColor(.lightGray, for: .highlighted)
         button.backgroundColor = .themeColor
@@ -75,8 +72,21 @@ class FireworksViewController: UIViewController {
         button.layer.cornerRadius = 10
         button.clipsToBounds = true
         
-        button.addTarget(self, action: #selector(toggleFireworksShow), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }
+    
+    private lazy var autoPlayButton: UIButton = {
+        let button = DefaultButton()
+        button.setTitle("Auto Play", for: .normal)
+        button.addTarget(self, action: #selector(toggleFireworksShow), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var aboutCultureButton: UIButton = {
+        let button = DefaultButton()
+        button.setTitle("About Culture", for: .normal)
+        button.addTarget(self, action: #selector(presentCultureViewConroller), for: .touchUpInside)
         return button
     }()
     
@@ -92,12 +102,38 @@ class FireworksViewController: UIViewController {
         setUpFireworksView()
     }
     
+    // MARK: Selector Methods
+    
+    @objc private func presentFireworkPickerController() {
+        let fireworkPickerController = FireworkPickerController()
+        fireworkPickerController.delegate = self
+        fireworkPickerController.modalPresentationStyle = .popover
+        fireworkPickerController.popoverPresentationController?.permittedArrowDirections = .down
+        fireworkPickerController.popoverPresentationController?.delegate = self
+        fireworkPickerController.popoverPresentationController?.sourceView = fireworkSelectorButton
+        fireworkPickerController.popoverPresentationController?.sourceRect = fireworkSelectorButton.bounds
+        fireworkPickerController.preferredContentSize.height = 180
+        present(fireworkPickerController, animated: true)
+    }
+    
+    @objc private func presentCultureViewConroller() {
+        let cultureVC = UINavigationController(rootViewController: CultureViewController())
+        self.show(cultureVC, sender: self)
+    }
+    
+    @objc private func toggleFireworksShow() {
+        isShowOn ? fireworksScene?.endFireworkShow() : fireworksScene?.startFireworkShow()
+        autoPlayButton.setTitle(isShowOn ? "Auto Play" : "Stop", for: .normal)
+        isShowOn = !isShowOn
+    }
+    
     // MARK: Private Functions
     
     private func setUpSubviews() {
         
         view.add(fireworksView, sizingView, colorPicker,
-                 fireworkSelectorButton, chemicalFormulaLabel, autoPlayButton)
+                 fireworkSelectorButton, chemicalFormulaLabel,
+                 autoPlayButton, aboutCultureButton)
         
         fireworksView.constrainToEdges()
         
@@ -125,7 +161,11 @@ class FireworksViewController: UIViewController {
             autoPlayButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             autoPlayButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             autoPlayButton.widthAnchor.constraint(equalToConstant: 100),
-            autoPlayButton.leadingAnchor.constraint(greaterThanOrEqualTo: fireworkSelectorButton.trailingAnchor)
+            autoPlayButton.leadingAnchor.constraint(greaterThanOrEqualTo: fireworkSelectorButton.trailingAnchor),
+            
+            aboutCultureButton.bottomAnchor.constraint(equalTo: autoPlayButton.topAnchor, constant: -10),
+            aboutCultureButton.centerXAnchor.constraint(equalTo: autoPlayButton.centerXAnchor),
+            aboutCultureButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
     
@@ -134,23 +174,6 @@ class FireworksViewController: UIViewController {
         fireworksView.presentScene(fireworksScene)
         fireworksScene?.scaleMode = .aspectFill
         fireworksScene!.fireworksDelegate = self
-    }
-    
-    @objc private func presentFireworkPickerController() {
-        let fireworkPickerController = FireworkPickerController()
-        fireworkPickerController.delegate = self
-        fireworkPickerController.modalPresentationStyle = .popover
-        fireworkPickerController.popoverPresentationController?.permittedArrowDirections = .down
-        fireworkPickerController.popoverPresentationController?.delegate = self
-        fireworkPickerController.popoverPresentationController?.sourceView = fireworkSelectorButton
-        fireworkPickerController.popoverPresentationController?.sourceRect = fireworkSelectorButton.bounds
-        present(fireworkPickerController, animated: true)
-    }
-    
-    @objc private func toggleFireworksShow() {
-        isShowOn ? fireworksScene?.endFireworkShow() : fireworksScene?.startFireworkShow()
-        autoPlayButton.setTitle(isShowOn ? "Auto Play" : "Stop", for: .normal)
-        isShowOn = !isShowOn
     }
     
     private func updateChemicalFormulaLabel(with color: UIColor) {
