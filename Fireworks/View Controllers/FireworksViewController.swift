@@ -85,7 +85,7 @@ class FireworksViewController: UIViewController {
     
     private lazy var aboutCultureButton: UIButton = {
         let button = DefaultButton()
-        button.setTitle("About Culture", for: .normal)
+        button.setTitle("Cultural Exploration", for: .normal)
         button.addTarget(self, action: #selector(presentCultureViewConroller), for: .touchUpInside)
         return button
     }()
@@ -118,7 +118,7 @@ class FireworksViewController: UIViewController {
     
     @objc private func presentCultureViewConroller() {
         let cultureVC = UINavigationController(rootViewController: CultureViewController())
-        self.show(cultureVC, sender: self)
+        self.present(cultureVC, animated: true)
     }
     
     @objc private func toggleFireworksShow() {
@@ -160,12 +160,12 @@ class FireworksViewController: UIViewController {
             
             autoPlayButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             autoPlayButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            autoPlayButton.widthAnchor.constraint(equalToConstant: 100),
+            autoPlayButton.widthAnchor.constraint(equalToConstant: 150),
             autoPlayButton.leadingAnchor.constraint(greaterThanOrEqualTo: fireworkSelectorButton.trailingAnchor),
             
             aboutCultureButton.bottomAnchor.constraint(equalTo: autoPlayButton.topAnchor, constant: -10),
             aboutCultureButton.centerXAnchor.constraint(equalTo: autoPlayButton.centerXAnchor),
-            aboutCultureButton.widthAnchor.constraint(equalToConstant: 100)
+            aboutCultureButton.widthAnchor.constraint(equalToConstant: 150)
         ])
     }
     

@@ -20,6 +20,8 @@ class CultureCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    private var isOpen = false
+    
     private var flagImageViewWidthConstraint: NSLayoutConstraint?
     
     private lazy var flagImageView: UIImageView = {
@@ -30,6 +32,9 @@ class CultureCollectionViewCell: UICollectionViewCell {
     
     private lazy var factLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 4
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -44,6 +49,18 @@ class CultureCollectionViewCell: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUpSubviews()
+    }
+    
+    // MARK: Touch
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        isOpen = !isOpen
+        flagImageViewWidthConstraint?.constant = isOpen ? 0 : bounds.width
+        UIView.animate(withDuration: 0.8) { [weak self] in
+            guard let `self` = self else { return }
+            self.layoutIfNeeded()
+        }
     }
     
     // MARK: Private Functions
