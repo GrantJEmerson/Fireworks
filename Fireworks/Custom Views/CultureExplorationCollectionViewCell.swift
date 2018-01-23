@@ -1,5 +1,5 @@
 //
-//  CultureCollectionViewCell.swift
+//  CultureExplorationCollectionViewCell.swift
 //  Fireworks
 //
 //  Created by Grant Emerson on 1/21/18.
@@ -8,7 +8,11 @@
 
 import UIKit
 
-class CultureCollectionViewCell: UICollectionViewCell {
+protocol CultureExplorationCellDelegate: class {
+    func updateLayout(for cell: CultureExplorationCollectionViewCell)
+}
+
+class CultureExplorationCollectionViewCell: UICollectionViewCell {
     
     // MARK: Properties
     
@@ -20,7 +24,9 @@ class CultureCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    private var isOpen = false
+    public weak var delegate: CultureExplorationCellDelegate?
+    
+    public private(set) var isOpen = false
     
     private var flagImageViewWidthConstraint: NSLayoutConstraint?
     
@@ -32,12 +38,14 @@ class CultureCollectionViewCell: UICollectionViewCell {
     
     private lazy var factLabel: UILabel = {
         let label = UILabel()
-        label.numberOfLines = 4
+        label.numberOfLines = -1
         label.textAlignment = .center
         label.adjustsFontSizeToFitWidth = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    private lazy var tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(toggleFacts))
     
     // MARK: Init
     
@@ -51,12 +59,12 @@ class CultureCollectionViewCell: UICollectionViewCell {
         setUpSubviews()
     }
     
-    // MARK: Touch
+    // MARK: Selector Functions
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
+    @objc private func toggleFacts() {
         isOpen = !isOpen
         flagImageViewWidthConstraint?.constant = isOpen ? 0 : bounds.width
+        delegate?.updateLayout(for: self)
         UIView.animate(withDuration: 0.8) { [weak self] in
             guard let `self` = self else { return }
             self.layoutIfNeeded()
@@ -66,6 +74,7 @@ class CultureCollectionViewCell: UICollectionViewCell {
     // MARK: Private Functions
     
     private func setUpSubviews() {
+        addGestureRecognizer(tapGestureRecognizer)
         add(flagImageView, factLabel)
         
         flagImageViewWidthConstraint = flagImageView.widthAnchor.constraint(equalToConstant: bounds.width)
@@ -76,8 +85,8 @@ class CultureCollectionViewCell: UICollectionViewCell {
             flagImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             flagImageViewWidthConstraint!,
             
-            factLabel.topAnchor.constraint(equalTo: topAnchor),
-            factLabel.bottomAnchor.constraint(equalTo: bottomAnchor),
+            factLabel.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            factLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
             factLabel.leadingAnchor.constraint(equalTo: flagImageView.trailingAnchor),
             factLabel.trailingAnchor.constraint(equalTo: trailingAnchor)
         ])

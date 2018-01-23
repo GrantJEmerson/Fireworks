@@ -12,7 +12,7 @@ struct Country {
     
     static let all = [
         Country(name: "United States", flag: #imageLiteral(resourceName: "United_States"),
-                fact: "Annually on the 4th of July, the United States celebrates their independence from Britain in 1776. People gather together in crowds to watch fireworks and enjoy some spent with their family and friends."),
+                fact: "Annually on the 4th of July, the United States celebrates their independence from Britain in 1776. People gather together in crowds to watch fireworks and enjoy some time spent with their family and friends."),
         Country(name: "Japan", flag: #imageLiteral(resourceName: "Japan"), fact: ""),
         Country(name: "India", flag: #imageLiteral(resourceName: "India"), fact: ""),
         Country(name: "Singapore", flag: #imageLiteral(resourceName: "Singapore"), fact: ""),

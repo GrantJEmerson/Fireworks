@@ -83,10 +83,12 @@ class FireworksViewController: UIViewController {
         return button
     }()
     
-    private lazy var aboutCultureButton: UIButton = {
+    private lazy var culturalExplorationButton: UIButton = {
         let button = DefaultButton()
+        button.titleLabel?.numberOfLines = 2
+        button.titleLabel?.textAlignment = .center
         button.setTitle("Cultural Exploration", for: .normal)
-        button.addTarget(self, action: #selector(presentCultureViewConroller), for: .touchUpInside)
+        button.addTarget(self, action: #selector(presentCultureExplorationViewConroller), for: .touchUpInside)
         return button
     }()
     
@@ -116,9 +118,9 @@ class FireworksViewController: UIViewController {
         present(fireworkPickerController, animated: true)
     }
     
-    @objc private func presentCultureViewConroller() {
-        let cultureVC = UINavigationController(rootViewController: CultureViewController())
-        self.present(cultureVC, animated: true)
+    @objc private func presentCultureExplorationViewConroller() {
+        let cultureExplorationVC = UINavigationController(rootViewController: CulturalExplorationViewController())
+        self.present(cultureExplorationVC, animated: true)
     }
     
     @objc private func toggleFireworksShow() {
@@ -133,7 +135,7 @@ class FireworksViewController: UIViewController {
         
         view.add(fireworksView, sizingView, colorPicker,
                  fireworkSelectorButton, chemicalFormulaLabel,
-                 autoPlayButton, aboutCultureButton)
+                 autoPlayButton, culturalExplorationButton)
         
         fireworksView.constrainToEdges()
         
@@ -160,12 +162,13 @@ class FireworksViewController: UIViewController {
             
             autoPlayButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
             autoPlayButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            autoPlayButton.widthAnchor.constraint(equalToConstant: 150),
+            autoPlayButton.widthAnchor.constraint(equalToConstant: 100),
             autoPlayButton.leadingAnchor.constraint(greaterThanOrEqualTo: fireworkSelectorButton.trailingAnchor),
             
-            aboutCultureButton.bottomAnchor.constraint(equalTo: autoPlayButton.topAnchor, constant: -10),
-            aboutCultureButton.centerXAnchor.constraint(equalTo: autoPlayButton.centerXAnchor),
-            aboutCultureButton.widthAnchor.constraint(equalToConstant: 150)
+            culturalExplorationButton.bottomAnchor.constraint(equalTo: autoPlayButton.topAnchor, constant: -10),
+            culturalExplorationButton.centerXAnchor.constraint(equalTo: autoPlayButton.centerXAnchor),
+            culturalExplorationButton.widthAnchor.constraint(equalToConstant: 100),
+            culturalExplorationButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     

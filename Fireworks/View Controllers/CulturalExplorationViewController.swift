@@ -8,26 +8,29 @@
 
 import UIKit
 
-class CultureViewController: UIViewController {
+class CulturalExplorationViewController: UIViewController {
     
     // MARK: Properties
     
     private let cellID = "cellID"
     
-    private lazy var backBarButtonItem: UIBarButtonItem = {
-        let barButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(dismissCultureViewController))
-        return barButtonItem
+    private lazy var doneBarButtonItem: UIBarButtonItem = {
+        let doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(dismissCultureViewController))
+        return doneBarButtonItem
+    }()
+    
+    private lazy var customLayout: CultureCollectionViewLayout = {
+        let layout = CultureCollectionViewLayout()
+        layout.delegate = self
+        return layout
     }()
     
     private lazy var collectionView: UICollectionView = {
-        let flowLayout = UICollectionViewFlowLayout()
-        let itemWidth = view.bounds.width / 5
-        flowLayout.itemSize = CGSize(width: itemWidth, height: itemWidth * 0.526)
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: customLayout)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .white
-        collectionView.register(CultureCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
+        collectionView.register(CultureExplorationCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
@@ -58,39 +61,42 @@ class CultureViewController: UIViewController {
         navigationItem.title = "Fireworks in Culture"
         if #available(iOS 11.0, *) {
             navigationController?.navigationBar.prefersLargeTitles = true
+            navigationItem.largeTitleDisplayMode = .always
         }
-        navigationItem.leftBarButtonItem = backBarButtonItem
+        navigationItem.rightBarButtonItem = doneBarButtonItem
     }
 }
 
-extension CultureViewController: UICollectionViewDelegate {
+extension CulturalExplorationViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CultureCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CultureExplorationCollectionViewCell
         cell.country = Country.all[indexPath.item]
+        cell.delegate = self
         return cell
     }
 }
 
-extension CultureViewController: UICollectionViewDataSource {
+extension CulturalExplorationViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Country.all.count
     }
 }
 
-extension CultureViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+extension CulturalExplorationViewController: CulturalExplorationLayoutDelegate {
+    func collectionView(_ collectionView: UICollectionView, heightAt indexPath: IndexPath) -> CGFloat {
         let image = Country.all[indexPath.item].flag
         let widthToHeightFactor = image.size.height / image.size.width
         let width = view.bounds.width / 4
         let height = width * widthToHeightFactor
-        return CGSize(width: width, height: height)
+        return height
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+}
+
+extension CulturalExplorationViewController: CultureExplorationCellDelegate {
+    func updateLayout(for cell: CultureExplorationCollectionViewCell) {
+        guard let indexPath = collectionView.indexPath(for: cell) else { return }
+        let newState = cell.isOpen ? CellState.open : .closed
+        customLayout.cellTransformation = CellTransformation(indexPath: indexPath, state: newState)
+        self.collectionView.collectionViewLayout.invalidateLayout()
     }
 }
