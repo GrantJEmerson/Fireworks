@@ -114,11 +114,18 @@ class FireworksScene: SKScene {
         fireworkEmitter.particleColorSequence = nil
         fireworkEmitter.particleScale *= scaleFactor
         fireworkEmitter.particleColor = color
+        guard let smokeEmitter = SKEmitterNode(fileNamed: "FireworkSmokeEmitter") else { return }
+        smokeEmitter.particlePosition = point
         let fireworkSound = SKAction.playSoundFileNamed(firework.name, waitForCompletion: false)
         let fireworkSequence = SKAction.sequence([
-            SKAction.run({ self.addChild(fireworkEmitter) }),
+            SKAction.run({
+                self.addChild(fireworkEmitter)
+                self.addChild(smokeEmitter)
+            }),
             SKAction.wait(forDuration: 2.5),
-            SKAction.run { fireworkEmitter.removeFromParent() }
+            SKAction.run(fireworkEmitter.removeFromParent),
+            SKAction.wait(forDuration: 8),
+            SKAction.run(smokeEmitter.removeFromParent)
         ])
         run(fireworkSound)
         run(fireworkSequence)

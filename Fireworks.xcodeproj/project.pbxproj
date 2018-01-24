@@ -32,6 +32,8 @@
 		55C255B920151B4F0007632E /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C255B820151B4F0007632E /* UIColor+Random.swift */; };
 		55C255BB20151BED0007632E /* CGFloat+RandomDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C255BA20151BED0007632E /* CGFloat+RandomDecimal.swift */; };
 		55C6337E2015FE8800C6ABFC /* CultureCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6337D2015FE8800C6ABFC /* CultureCollectionViewLayout.swift */; };
+		55CB9CF22018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB9CF12018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift */; };
+		55D8EBBC2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55D8EBBA2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks */; };
 		55F66D9B2013A30100C4D621 /* SparkEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66D9A2013A30100C4D621 /* SparkEmitter.sks */; };
 		55F66D9D2013D1CB00C4D621 /* Classic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66D9C2013D1CB00C4D621 /* Classic.sks */; };
 		55F66DA12013D70900C4D621 /* SKAction+Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */; };
@@ -73,6 +75,8 @@
 		55C255B820151B4F0007632E /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
 		55C255BA20151BED0007632E /* CGFloat+RandomDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+RandomDecimal.swift"; sourceTree = "<group>"; };
 		55C6337D2015FE8800C6ABFC /* CultureCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCollectionViewLayout.swift; sourceTree = "<group>"; };
+		55CB9CF12018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentAsPopUp.swift"; sourceTree = "<group>"; };
+		55D8EBBA2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireworkSmokeEmitter.sks; sourceTree = "<group>"; };
 		55F66D9A2013A30100C4D621 /* SparkEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkEmitter.sks; sourceTree = "<group>"; };
 		55F66D9C2013D1CB00C4D621 /* Classic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Classic.sks; sourceTree = "<group>"; };
 		55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKAction+Repeat.swift"; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 		55F66DAC20141EEE00C4D621 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				55CB9CF12018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift */,
 				5539FBCE2012873700BACEBA /* UIView+addSubviews.swift */,
 				5539FBCB2012873700BACEBA /* UIView+constrainToEdges.swift */,
 				55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */,
@@ -178,6 +183,7 @@
 				55F66DBA20143B8E00C4D621 /* RapidFire.wav */,
 				55F66D9A2013A30100C4D621 /* SparkEmitter.sks */,
 				55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */,
+				55D8EBBA2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks */,
 			);
 			path = FireworkGameScene;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				55F66DB320142F0C00C4D621 /* RapidFire.sks in Resources */,
 				55F66DA52013F14100C4D621 /* Classic.wav in Resources */,
 				55F66D9B2013A30100C4D621 /* SparkEmitter.sks in Resources */,
+				55D8EBBC2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks in Resources */,
 				55F66DA920141B3F00C4D621 /* Crackle.sks in Resources */,
 				5539FBBF2012870700BACEBA /* Assets.xcassets in Resources */,
 				55F66DB920143A1300C4D621 /* BigO.wav in Resources */,
@@ -308,6 +315,7 @@
 				5539FBD32012873800BACEBA /* UIView+addSubviews.swift in Sources */,
 				5539FBD42012873800BACEBA /* ColorControlSlider.swift in Sources */,
 				5539FBB82012870700BACEBA /* AppDelegate.swift in Sources */,
+				55CB9CF22018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift in Sources */,
 				55658DEC20155F930094F8EB /* CulturalExplorationViewController.swift in Sources */,
 				5539FBDC2012B7BE00BACEBA /* Firework.swift in Sources */,
 			);

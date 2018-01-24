@@ -51,11 +51,13 @@ class CultureExplorationCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setUpCell()
         setUpSubviews()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setUpCell()
         setUpSubviews()
     }
     
@@ -68,13 +70,17 @@ class CultureExplorationCollectionViewCell: UICollectionViewCell {
         UIView.animate(withDuration: 0.8) { [weak self] in
             guard let `self` = self else { return }
             self.layoutIfNeeded()
+            self.backgroundColor = self.isOpen ? .white : .black
         }
     }
     
     // MARK: Private Functions
     
-    private func setUpSubviews() {
+    private func setUpCell() {
         addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    private func setUpSubviews() {
         add(flagImageView, factLabel)
         
         flagImageViewWidthConstraint = flagImageView.widthAnchor.constraint(equalToConstant: bounds.width)

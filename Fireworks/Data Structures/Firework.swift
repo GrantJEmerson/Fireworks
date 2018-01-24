@@ -16,7 +16,7 @@ struct Firework {
         Firework(name: "BigO", thumbNailImage: #imageLiteral(resourceName: "BigOFireworkThumbnail")),
         Firework(name: "RapidFire", thumbNailImage: #imageLiteral(resourceName: "RapidFireFireworkThumbnail"))
     ]
-    
+
     let name: String
     let thumbNailImage: UIImage
 }

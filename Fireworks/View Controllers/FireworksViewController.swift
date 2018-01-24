@@ -53,10 +53,10 @@ class FireworksViewController: UIViewController {
     
     private lazy var chemicalFormulaLabel: UILabel = {
         let label = UILabel()
+        label.alpha = 0
         label.textColor = .white
         label.text = "Titanium Powder"
         label.font = UIFont(name: "Futura", size: 18)
-        label.alpha = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -92,6 +92,13 @@ class FireworksViewController: UIViewController {
         return button
     }()
     
+    private lazy var buttonView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .clear
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
     // MARK: View Controller Life Cycle
 
     override func viewDidLoad() {
@@ -102,23 +109,19 @@ class FireworksViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setUpFireworksView()
+        let instructionsController = InstructionsController(withInstructions: " Bla Bla")
+        presentPopUp(instructionsController, withHeight: 180, by: sizingView)
     }
     
     // MARK: Selector Methods
     
     @objc private func presentFireworkPickerController() {
         let fireworkPickerController = FireworkPickerController()
-        fireworkPickerController.delegate = self
-        fireworkPickerController.modalPresentationStyle = .popover
-        fireworkPickerController.popoverPresentationController?.permittedArrowDirections = .down
-        fireworkPickerController.popoverPresentationController?.delegate = self
-        fireworkPickerController.popoverPresentationController?.sourceView = fireworkSelectorButton
-        fireworkPickerController.popoverPresentationController?.sourceRect = fireworkSelectorButton.bounds
-        fireworkPickerController.preferredContentSize.height = 180
-        present(fireworkPickerController, animated: true)
+        presentPopUp(fireworkPickerController, withHeight: 180, by: fireworkSelectorButton)
     }
     
     @objc private func presentCultureExplorationViewConroller() {
+        if isShowOn { toggleFireworksShow() }
         let cultureExplorationVC = UINavigationController(rootViewController: CulturalExplorationViewController())
         self.present(cultureExplorationVC, animated: true)
     }
@@ -132,10 +135,10 @@ class FireworksViewController: UIViewController {
     // MARK: Private Functions
     
     private func setUpSubviews() {
-        
+        view.backgroundColor = .black
         view.add(fireworksView, sizingView, colorPicker,
-                 fireworkSelectorButton, chemicalFormulaLabel,
-                 autoPlayButton, culturalExplorationButton)
+                 fireworkSelectorButton, chemicalFormulaLabel, buttonView)
+        buttonView.add(autoPlayButton, culturalExplorationButton)
         
         fireworksView.constrainToEdges()
         
@@ -160,15 +163,19 @@ class FireworksViewController: UIViewController {
             chemicalFormulaLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
             chemicalFormulaLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 100),
             
-            autoPlayButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20),
-            autoPlayButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            autoPlayButton.widthAnchor.constraint(equalToConstant: 100),
-            autoPlayButton.leadingAnchor.constraint(greaterThanOrEqualTo: fireworkSelectorButton.trailingAnchor),
+            buttonView.heightAnchor.constraint(equalToConstant: 140),
+            buttonView.widthAnchor.constraint(equalToConstant: 134),
+            buttonView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            buttonView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             
+            autoPlayButton.bottomAnchor.constraint(equalTo: buttonView.bottomAnchor, constant: -20),
+            autoPlayButton.centerXAnchor.constraint(equalTo: buttonView.centerXAnchor),
+            autoPlayButton.widthAnchor.constraint(equalToConstant: 100),
+            
+            culturalExplorationButton.topAnchor.constraint(equalTo: buttonView.topAnchor, constant: 20),
+            culturalExplorationButton.centerXAnchor.constraint(equalTo: buttonView.centerXAnchor),
             culturalExplorationButton.bottomAnchor.constraint(equalTo: autoPlayButton.topAnchor, constant: -10),
-            culturalExplorationButton.centerXAnchor.constraint(equalTo: autoPlayButton.centerXAnchor),
-            culturalExplorationButton.widthAnchor.constraint(equalToConstant: 100),
-            culturalExplorationButton.heightAnchor.constraint(equalToConstant: 50)
+            culturalExplorationButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }
     

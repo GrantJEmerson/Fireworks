@@ -29,7 +29,7 @@ class CulturalExplorationViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: customLayout)
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .black
         collectionView.register(CultureExplorationCollectionViewCell.self, forCellWithReuseIdentifier: cellID)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
