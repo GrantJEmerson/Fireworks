@@ -29,8 +29,9 @@ class FireworksScene: SKScene {
     
     private var sparkEmitterNodes = [UITouch: SKEmitterNode]()
     
+    private let fireworkDuration: CGFloat = 1.5
+    
     private let sparkAudioFile: AVAudioFile = {
-        // I am using force unwrap due to my certainty of the file existing
         let urlString = Bundle.main.path(forResource: "SizzlingSparkSound", ofType: "wav")!
         return try! AVAudioFile(forReading: URL(string: urlString)!)
     }()
@@ -95,7 +96,7 @@ class FireworksScene: SKScene {
             sparkEmitterNodes.removeValue(forKey: touch)
             let touchLocation = touch.location(in: self)
             guard let currentFirework = fireworksDelegate?.currentFirework else { return }
-            explodeFirework(currentFirework,
+            explode(currentFirework,
                             at: touchLocation,
                             withColor: fireworksDelegate?.fireworksColor ?? .orange,
                             withScaleFactor: fireworksDelegate?.scaleFactor ?? 1)
@@ -104,9 +105,20 @@ class FireworksScene: SKScene {
         sparkSoundPlayer.pause()
     }
     
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for touch in touches {
+            guard let sparkEmitterNode = sparkEmitterNodes[touch] else { continue }
+            sparkEmitterNode.removeAllActions()
+            sparkEmitterNode.removeFromParent()
+            sparkEmitterNodes.removeValue(forKey: touch)
+        }
+        guard sparkEmitterNodes.isEmpty else { return }
+        sparkSoundPlayer.pause()
+    }
+    
     // MARK: Private Functions
     
-    private func explodeFirework(_ firework: Firework,
+    private func explode(_ firework: Firework,
                                  at point: CGPoint, withColor color: UIColor,
                                  withScaleFactor scaleFactor: CGFloat) {
         guard let fireworkEmitter = SKEmitterNode(fileNamed: firework.name) else { return }
@@ -139,11 +151,10 @@ class FireworksScene: SKScene {
         blurEffect.addChild(SKSpriteNode(texture: SKTexture(image: #imageLiteral(resourceName: "CloudIcon")), size: CGSize(width: 40, height: 40)))
         blurEffect.filter = CIFilter(name: "CIGaussianBlur", withInputParameters: ["inputRadius" : 20])
         cloud.addChild(blurEffect)
-        let swayAction =
-            SKAction.sequence([
-                SKAction.moveBy(x: 10, y: 0, duration: 2),
-                SKAction.moveBy(x: -10, y: 0, duration: 2)
-            ]).repeated()
+        let swayAction = SKAction.sequence([
+                            SKAction.moveBy(x: 10, y: 0, duration: 2),
+                            SKAction.moveBy(x: -10, y: 0, duration: 2)
+                         ]).repeated()
         addChild(cloud)
         cloud.position = CGPoint(x: 50, y: frame.maxY - 50)
         cloud.run(swayAction)
@@ -152,7 +163,7 @@ class FireworksScene: SKScene {
     private func addSparkEmitter() {
         self.fireworkShowSparkEmitterNode = SKEmitterNode(fileNamed: "SparkEmitter")
         self.addChild(fireworkShowSparkEmitterNode!)
-        fireworkShowSparkEmitterNode?.particlePosition = .random(in: self.frame.size)
+        fireworkShowSparkEmitterNode?.particlePosition = CGPoint(x: .random(to: frame.width), y: 0)
     }
     
     // MARK: Public Functions
@@ -163,38 +174,38 @@ class FireworksScene: SKScene {
             self.addSparkEmitter()
             self.sparkSoundPlayer.play()
         }
-        let moveSequence = SKAction.sequence([
-            SKAction.run { [weak self] in
-                guard let `self` = self,
-                    let currentX = self.fireworkShowSparkEmitterNode?.particlePosition.x,
-                    let currentY = self.fireworkShowSparkEmitterNode?.particlePosition.y else { return }
-                let randomPoint = CGPoint.random(in: self.frame.size)
-                let xAddOn = (randomPoint.x - currentX) / 20
-                let yAddOn = (randomPoint.y - currentY) / 20
-                let smoothTranistion = SKAction.sequence([
-                    SKAction.run {
-                        self.fireworkShowSparkEmitterNode?.particlePosition.x += xAddOn
-                        self.fireworkShowSparkEmitterNode?.particlePosition.y += yAddOn
-                    },
-                    SKAction.wait(forDuration: 0.035)
-                ])
-                self.fireworkShowSparkEmitterNode?.run(SKAction.repeat(smoothTranistion, count: 20))
-            },
-            SKAction.wait(forDuration: 0.7)
-        ])
-        let moveAction = SKAction.repeat(moveSequence, count: 4)
+        let moveAction = SKAction.run { [weak self] in
+            guard let `self` = self,
+                let currentX = self.fireworkShowSparkEmitterNode?.particlePosition.x,
+                let currentY = self.fireworkShowSparkEmitterNode?.particlePosition.y else { return }
+            let upperScreen = CGRect(x: 0, y: self.frame.midY,
+                                     width: self.frame.width, height: self.frame.height / 2)
+            let amountOfStops: CGFloat = 20
+            let randomPoint = CGPoint.random(in: upperScreen)
+            let xAddOn = (randomPoint.x - currentX) / amountOfStops
+            let yAddOn = (randomPoint.y - currentY) / amountOfStops
+            let smoothTranistion = SKAction.sequence([
+                SKAction.run {
+                    self.fireworkShowSparkEmitterNode?.particlePosition.x += xAddOn
+                    self.fireworkShowSparkEmitterNode?.particlePosition.y += yAddOn
+                },
+                SKAction.wait(forDuration: TimeInterval(self.fireworkDuration / amountOfStops))
+            ])
+            self.fireworkShowSparkEmitterNode?.run(SKAction.repeat(smoothTranistion, count: Int(amountOfStops)))
+        }
+        let waitAction = SKAction.wait(forDuration: TimeInterval(fireworkDuration))
         let explodeAction = SKAction.run { [weak self] in
             guard let `self` = self,
                 let explosionPoint = self.fireworkShowSparkEmitterNode?.particlePosition else { return }
             self.fireworkShowSparkEmitterNode?.removeFromParent()
             self.fireworkShowSparkEmitterNode = nil
             self.sparkSoundPlayer.pause()
-            self.explodeFirework(Firework.defaultSet[Int(arc4random_uniform(4))],
+            self.explode(Firework.defaultSet[Int(arc4random_uniform(4))],
                                  at: explosionPoint,
                                  withColor: .random,
                                  withScaleFactor: .randomDecimal)
         }
-        let fireworksSequence = SKAction.sequence([addAction, moveAction, explodeAction]).repeated()
+        let fireworksSequence = SKAction.sequence([addAction, moveAction, waitAction, explodeAction]).repeated()
         run(fireworksSequence)
     }
     

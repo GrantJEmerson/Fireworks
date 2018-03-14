@@ -23,7 +23,8 @@ struct Country {
         Country(name: "China", flag: #imageLiteral(resourceName: "China"), fact: "During the first weekend of February, China celebrates the Chines New Year with red and yellow firework displays, dragon costumes, and the Lantern Festivals."),
         Country(name: "France", flag: #imageLiteral(resourceName: "France"), fact: "Annually on July 14th, France celebrates the French revolution through firework displays. Paris holds the most exciting display of all, around the Eiffel Tower."),
         Country(name: "Hungary", flag: #imageLiteral(resourceName: "Hungary"), fact: "Hungary holds a firework display every year on August 20th to celebrate the nation and its values."),
-        Country(name: "Malta", flag: #imageLiteral(resourceName: "Malta"), fact: "Fireworks have been used throughout the history of Malta. When St. John was in charge, any important event or election involved a fireworks display.")
+        Country(name: "Malta", flag: #imageLiteral(resourceName: "Malta"), fact: "Fireworks have been used throughout the history of Malta. When St. John was in charge, any important event or election involved a fireworks display."),
+        Country(name: "Costa Rica", flag: #imageLiteral(resourceName: "Costa_Rica"), fact: "Costa Rica has a tradition of using fireworks to celebrate weddings.")
     ]
     
     let name: String

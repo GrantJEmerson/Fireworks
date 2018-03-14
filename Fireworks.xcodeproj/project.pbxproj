@@ -7,87 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5531977E2058A3E3004A8352 /* CulturalExplorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197792058A3E2004A8352 /* CulturalExplorationViewController.swift */; };
+		5531977F2058A3E3004A8352 /* FireworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531977A2058A3E2004A8352 /* FireworksViewController.swift */; };
+		553197802058A3E3004A8352 /* InstructionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531977B2058A3E3004A8352 /* InstructionsController.swift */; };
+		553197812058A3E3004A8352 /* CultureCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531977C2058A3E3004A8352 /* CultureCollectionViewLayout.swift */; };
+		553197822058A3E3004A8352 /* FireworkPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531977D2058A3E3004A8352 /* FireworkPickerController.swift */; };
+		553197922058A43D004A8352 /* FireworksScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531978F2058A43C004A8352 /* FireworksScene.swift */; };
+		5531979F2058A51B004A8352 /* BigO.sks in Resources */ = {isa = PBXBuildFile; fileRef = 553197892058A43A004A8352 /* BigO.sks */; };
+		553197A02058A51B004A8352 /* BigO.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5531978A2058A43B004A8352 /* BigO.wav */; };
+		553197A12058A51B004A8352 /* Classic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5531978E2058A43C004A8352 /* Classic.sks */; };
+		553197A22058A51B004A8352 /* Classic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5531978B2058A43B004A8352 /* Classic.wav */; };
+		553197A32058A51B004A8352 /* Crackle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 553197882058A43A004A8352 /* Crackle.sks */; };
+		553197A42058A51B004A8352 /* Crackle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5531978D2058A43B004A8352 /* Crackle.wav */; };
+		553197A52058A51B004A8352 /* FireworkSmokeEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 553197902058A43C004A8352 /* FireworkSmokeEmitter.sks */; };
+		553197A62058A51B004A8352 /* RapidFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5531978C2058A43B004A8352 /* RapidFire.sks */; };
+		553197A72058A51B004A8352 /* RapidFire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 553197862058A439004A8352 /* RapidFire.wav */; };
+		553197A82058A51B004A8352 /* SizzlingSparkSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 553197872058A439004A8352 /* SizzlingSparkSound.wav */; };
+		553197A92058A51B004A8352 /* SparkEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 553197912058A43D004A8352 /* SparkEmitter.sks */; };
+		553197B52058A5FD004A8352 /* UIColor+ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197AA2058A5FC004A8352 /* UIColor+ColorSet.swift */; };
+		553197B62058A5FD004A8352 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197AB2058A5FC004A8352 /* UIColor+Random.swift */; };
+		553197B72058A5FD004A8352 /* CGPoint+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197AC2058A5FC004A8352 /* CGPoint+Random.swift */; };
+		553197B82058A5FD004A8352 /* UIView+addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197AD2058A5FC004A8352 /* UIView+addSubviews.swift */; };
+		553197B92058A5FD004A8352 /* UIColor+ChemicalFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197AE2058A5FD004A8352 /* UIColor+ChemicalFormula.swift */; };
+		553197BA2058A5FD004A8352 /* CGFloat+RandomDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197AF2058A5FD004A8352 /* CGFloat+RandomDecimal.swift */; };
+		553197BB2058A5FD004A8352 /* UIView+constrainToEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197B02058A5FD004A8352 /* UIView+constrainToEdges.swift */; };
+		553197BC2058A5FD004A8352 /* UIColor+Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197B12058A5FD004A8352 /* UIColor+Subtraction.swift */; };
+		553197BD2058A5FD004A8352 /* SKAction+Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197B22058A5FD004A8352 /* SKAction+Repeat.swift */; };
+		553197BE2058A5FD004A8352 /* UIViewController+PresentAsPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197B32058A5FD004A8352 /* UIViewController+PresentAsPopUp.swift */; };
+		553197BF2058A5FD004A8352 /* CGFloat+Positive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197B42058A5FD004A8352 /* CGFloat+Positive.swift */; };
 		5539FBB82012870700BACEBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBB72012870700BACEBA /* AppDelegate.swift */; };
 		5539FBBF2012870700BACEBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5539FBBE2012870700BACEBA /* Assets.xcassets */; };
 		5539FBC22012870700BACEBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5539FBC02012870700BACEBA /* LaunchScreen.storyboard */; };
 		5539FBCA2012871900BACEBA /* SizingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBC92012871900BACEBA /* SizingView.swift */; };
-		5539FBD02012873800BACEBA /* UIView+constrainToEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCB2012873700BACEBA /* UIView+constrainToEdges.swift */; };
 		5539FBD12012873800BACEBA /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCC2012873700BACEBA /* ColorPicker.swift */; };
 		5539FBD22012873800BACEBA /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCD2012873700BACEBA /* GradientView.swift */; };
-		5539FBD32012873800BACEBA /* UIView+addSubviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCE2012873700BACEBA /* UIView+addSubviews.swift */; };
 		5539FBD42012873800BACEBA /* ColorControlSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBCF2012873800BACEBA /* ColorControlSlider.swift */; };
-		5539FBD6201289EE00BACEBA /* FireworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBD5201289EE00BACEBA /* FireworksViewController.swift */; };
-		5539FBD82012A34600BACEBA /* InstructionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBD72012A34600BACEBA /* InstructionsController.swift */; };
-		5539FBDA2012B78400BACEBA /* FireworkPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBD92012B78400BACEBA /* FireworkPickerController.swift */; };
 		5539FBDC2012B7BE00BACEBA /* Firework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBDB2012B7BE00BACEBA /* Firework.swift */; };
-		5539FBDE2012B92300BACEBA /* FireworksScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5539FBDD2012B92300BACEBA /* FireworksScene.swift */; };
-		55658DEC20155F930094F8EB /* CulturalExplorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55658DEB20155F930094F8EB /* CulturalExplorationViewController.swift */; };
 		55658DEE201565310094F8EB /* CultureExplorationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55658DED201565310094F8EB /* CultureExplorationCollectionViewCell.swift */; };
 		55658DF020156EF10094F8EB /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55658DEF20156EF10094F8EB /* Country.swift */; };
-		55C255AF2014FECF0007632E /* UIColor+ChemicalFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C255AE2014FECF0007632E /* UIColor+ChemicalFormula.swift */; };
-		55C255B12015103C0007632E /* CGFloat+Positive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C255B02015103C0007632E /* CGFloat+Positive.swift */; };
-		55C255B3201510640007632E /* UIColor+Subtraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C255B2201510640007632E /* UIColor+Subtraction.swift */; };
-		55C255B5201517C50007632E /* CGPoint+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C255B4201517C50007632E /* CGPoint+Random.swift */; };
-		55C255B720151A590007632E /* UIColor+ColorSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C255B620151A590007632E /* UIColor+ColorSet.swift */; };
-		55C255B920151B4F0007632E /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C255B820151B4F0007632E /* UIColor+Random.swift */; };
-		55C255BB20151BED0007632E /* CGFloat+RandomDecimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C255BA20151BED0007632E /* CGFloat+RandomDecimal.swift */; };
-		55C6337E2015FE8800C6ABFC /* CultureCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6337D2015FE8800C6ABFC /* CultureCollectionViewLayout.swift */; };
-		55CB9CF22018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CB9CF12018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift */; };
-		55D8EBBC2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55D8EBBA2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks */; };
-		55F66D9B2013A30100C4D621 /* SparkEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66D9A2013A30100C4D621 /* SparkEmitter.sks */; };
-		55F66D9D2013D1CB00C4D621 /* Classic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66D9C2013D1CB00C4D621 /* Classic.sks */; };
-		55F66DA12013D70900C4D621 /* SKAction+Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */; };
-		55F66DA32013DE6100C4D621 /* SizzlingSparkSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */; };
-		55F66DA52013F14100C4D621 /* Classic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DA42013F14100C4D621 /* Classic.wav */; };
-		55F66DA920141B3F00C4D621 /* Crackle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DA820141B3F00C4D621 /* Crackle.sks */; };
-		55F66DAB20141D0300C4D621 /* BigO.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DAA20141D0300C4D621 /* BigO.sks */; };
-		55F66DB320142F0C00C4D621 /* RapidFire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DB220142F0C00C4D621 /* RapidFire.sks */; };
-		55F66DB72014383600C4D621 /* Crackle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DB62014383600C4D621 /* Crackle.wav */; };
-		55F66DB920143A1300C4D621 /* BigO.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DB820143A1300C4D621 /* BigO.wav */; };
-		55F66DBB20143B8E00C4D621 /* RapidFire.wav in Resources */ = {isa = PBXBuildFile; fileRef = 55F66DBA20143B8E00C4D621 /* RapidFire.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		553197792058A3E2004A8352 /* CulturalExplorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalExplorationViewController.swift; sourceTree = "<group>"; };
+		5531977A2058A3E2004A8352 /* FireworksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksViewController.swift; sourceTree = "<group>"; };
+		5531977B2058A3E3004A8352 /* InstructionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsController.swift; sourceTree = "<group>"; };
+		5531977C2058A3E3004A8352 /* CultureCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCollectionViewLayout.swift; sourceTree = "<group>"; };
+		5531977D2058A3E3004A8352 /* FireworkPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworkPickerController.swift; sourceTree = "<group>"; };
+		553197862058A439004A8352 /* RapidFire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = RapidFire.wav; sourceTree = "<group>"; };
+		553197872058A439004A8352 /* SizzlingSparkSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SizzlingSparkSound.wav; sourceTree = "<group>"; };
+		553197882058A43A004A8352 /* Crackle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Crackle.sks; sourceTree = "<group>"; };
+		553197892058A43A004A8352 /* BigO.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BigO.sks; sourceTree = "<group>"; };
+		5531978A2058A43B004A8352 /* BigO.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BigO.wav; sourceTree = "<group>"; };
+		5531978B2058A43B004A8352 /* Classic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Classic.wav; sourceTree = "<group>"; };
+		5531978C2058A43B004A8352 /* RapidFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RapidFire.sks; sourceTree = "<group>"; };
+		5531978D2058A43B004A8352 /* Crackle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Crackle.wav; sourceTree = "<group>"; };
+		5531978E2058A43C004A8352 /* Classic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Classic.sks; sourceTree = "<group>"; };
+		5531978F2058A43C004A8352 /* FireworksScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksScene.swift; sourceTree = "<group>"; };
+		553197902058A43C004A8352 /* FireworkSmokeEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireworkSmokeEmitter.sks; sourceTree = "<group>"; };
+		553197912058A43D004A8352 /* SparkEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkEmitter.sks; sourceTree = "<group>"; };
+		553197AA2058A5FC004A8352 /* UIColor+ColorSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorSet.swift"; sourceTree = "<group>"; };
+		553197AB2058A5FC004A8352 /* UIColor+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
+		553197AC2058A5FC004A8352 /* CGPoint+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Random.swift"; sourceTree = "<group>"; };
+		553197AD2058A5FC004A8352 /* UIView+addSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+addSubviews.swift"; sourceTree = "<group>"; };
+		553197AE2058A5FD004A8352 /* UIColor+ChemicalFormula.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ChemicalFormula.swift"; sourceTree = "<group>"; };
+		553197AF2058A5FD004A8352 /* CGFloat+RandomDecimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+RandomDecimal.swift"; sourceTree = "<group>"; };
+		553197B02058A5FD004A8352 /* UIView+constrainToEdges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constrainToEdges.swift"; sourceTree = "<group>"; };
+		553197B12058A5FD004A8352 /* UIColor+Subtraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Subtraction.swift"; sourceTree = "<group>"; };
+		553197B22058A5FD004A8352 /* SKAction+Repeat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKAction+Repeat.swift"; sourceTree = "<group>"; };
+		553197B32058A5FD004A8352 /* UIViewController+PresentAsPopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentAsPopUp.swift"; sourceTree = "<group>"; };
+		553197B42058A5FD004A8352 /* CGFloat+Positive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Positive.swift"; sourceTree = "<group>"; };
 		5539FBB42012870700BACEBA /* Fireworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fireworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5539FBB72012870700BACEBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5539FBBE2012870700BACEBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5539FBC12012870700BACEBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5539FBC32012870700BACEBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5539FBC92012871900BACEBA /* SizingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizingView.swift; sourceTree = "<group>"; };
-		5539FBCB2012873700BACEBA /* UIView+constrainToEdges.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+constrainToEdges.swift"; sourceTree = "<group>"; };
 		5539FBCC2012873700BACEBA /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 		5539FBCD2012873700BACEBA /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		5539FBCE2012873700BACEBA /* UIView+addSubviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+addSubviews.swift"; sourceTree = "<group>"; };
 		5539FBCF2012873800BACEBA /* ColorControlSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControlSlider.swift; sourceTree = "<group>"; };
-		5539FBD5201289EE00BACEBA /* FireworksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksViewController.swift; sourceTree = "<group>"; };
-		5539FBD72012A34600BACEBA /* InstructionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsController.swift; sourceTree = "<group>"; };
-		5539FBD92012B78400BACEBA /* FireworkPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworkPickerController.swift; sourceTree = "<group>"; };
 		5539FBDB2012B7BE00BACEBA /* Firework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firework.swift; sourceTree = "<group>"; };
-		5539FBDD2012B92300BACEBA /* FireworksScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksScene.swift; sourceTree = "<group>"; };
-		55658DEB20155F930094F8EB /* CulturalExplorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalExplorationViewController.swift; sourceTree = "<group>"; };
 		55658DED201565310094F8EB /* CultureExplorationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureExplorationCollectionViewCell.swift; sourceTree = "<group>"; };
 		55658DEF20156EF10094F8EB /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
-		55C255AE2014FECF0007632E /* UIColor+ChemicalFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ChemicalFormula.swift"; sourceTree = "<group>"; };
-		55C255B02015103C0007632E /* CGFloat+Positive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Positive.swift"; sourceTree = "<group>"; };
-		55C255B2201510640007632E /* UIColor+Subtraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Subtraction.swift"; sourceTree = "<group>"; };
-		55C255B4201517C50007632E /* CGPoint+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Random.swift"; sourceTree = "<group>"; };
-		55C255B620151A590007632E /* UIColor+ColorSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorSet.swift"; sourceTree = "<group>"; };
-		55C255B820151B4F0007632E /* UIColor+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
-		55C255BA20151BED0007632E /* CGFloat+RandomDecimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+RandomDecimal.swift"; sourceTree = "<group>"; };
-		55C6337D2015FE8800C6ABFC /* CultureCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCollectionViewLayout.swift; sourceTree = "<group>"; };
-		55CB9CF12018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+PresentAsPopUp.swift"; sourceTree = "<group>"; };
-		55D8EBBA2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FireworkSmokeEmitter.sks; sourceTree = "<group>"; };
-		55F66D9A2013A30100C4D621 /* SparkEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SparkEmitter.sks; sourceTree = "<group>"; };
-		55F66D9C2013D1CB00C4D621 /* Classic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Classic.sks; sourceTree = "<group>"; };
-		55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKAction+Repeat.swift"; sourceTree = "<group>"; };
-		55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = SizzlingSparkSound.wav; sourceTree = "<group>"; };
-		55F66DA42013F14100C4D621 /* Classic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Classic.wav; sourceTree = "<group>"; };
-		55F66DA820141B3F00C4D621 /* Crackle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Crackle.sks; sourceTree = "<group>"; };
-		55F66DAA20141D0300C4D621 /* BigO.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BigO.sks; sourceTree = "<group>"; };
-		55F66DB220142F0C00C4D621 /* RapidFire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RapidFire.sks; sourceTree = "<group>"; };
-		55F66DB62014383600C4D621 /* Crackle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Crackle.wav; sourceTree = "<group>"; };
-		55F66DB820143A1300C4D621 /* BigO.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BigO.wav; sourceTree = "<group>"; };
-		55F66DBA20143B8E00C4D621 /* RapidFire.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = RapidFire.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +101,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		553197852058A422004A8352 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				553197792058A3E2004A8352 /* CulturalExplorationViewController.swift */,
+				5531977C2058A3E3004A8352 /* CultureCollectionViewLayout.swift */,
+				5531977D2058A3E3004A8352 /* FireworkPickerController.swift */,
+				5531977A2058A3E2004A8352 /* FireworksViewController.swift */,
+				5531977B2058A3E3004A8352 /* InstructionsController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		553197932058A446004A8352 /* Fireworks Game Scene */ = {
+			isa = PBXGroup;
+			children = (
+				553197892058A43A004A8352 /* BigO.sks */,
+				5531978A2058A43B004A8352 /* BigO.wav */,
+				5531978E2058A43C004A8352 /* Classic.sks */,
+				5531978B2058A43B004A8352 /* Classic.wav */,
+				553197882058A43A004A8352 /* Crackle.sks */,
+				5531978D2058A43B004A8352 /* Crackle.wav */,
+				553197902058A43C004A8352 /* FireworkSmokeEmitter.sks */,
+				5531978F2058A43C004A8352 /* FireworksScene.swift */,
+				5531978C2058A43B004A8352 /* RapidFire.sks */,
+				553197862058A439004A8352 /* RapidFire.wav */,
+				553197872058A439004A8352 /* SizzlingSparkSound.wav */,
+				553197912058A43D004A8352 /* SparkEmitter.sks */,
+			);
+			path = "Fireworks Game Scene";
+			sourceTree = "<group>";
+		};
 		5539FBAB2012870700BACEBA = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				55F66DB120141F6300C4D621 /* Supporting Files */,
-				55F66DB020141F4E00C4D621 /* View Controllers */,
-				55F66DAF20141F3900C4D621 /* FireworkGameScene */,
+				553197932058A446004A8352 /* Fireworks Game Scene */,
+				553197852058A422004A8352 /* View Controllers */,
 				55F66DAD20141EFE00C4D621 /* Custom Views */,
 				55F66DAC20141EEE00C4D621 /* Extensions */,
 				55F66DAE20141F0800C4D621 /* Data Structures */,
@@ -133,17 +164,17 @@
 		55F66DAC20141EEE00C4D621 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				55CB9CF12018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift */,
-				5539FBCE2012873700BACEBA /* UIView+addSubviews.swift */,
-				5539FBCB2012873700BACEBA /* UIView+constrainToEdges.swift */,
-				55F66DA02013D70900C4D621 /* SKAction+Repeat.swift */,
-				55C255AE2014FECF0007632E /* UIColor+ChemicalFormula.swift */,
-				55C255B2201510640007632E /* UIColor+Subtraction.swift */,
-				55C255B620151A590007632E /* UIColor+ColorSet.swift */,
-				55C255B820151B4F0007632E /* UIColor+Random.swift */,
-				55C255B02015103C0007632E /* CGFloat+Positive.swift */,
-				55C255BA20151BED0007632E /* CGFloat+RandomDecimal.swift */,
-				55C255B4201517C50007632E /* CGPoint+Random.swift */,
+				553197B42058A5FD004A8352 /* CGFloat+Positive.swift */,
+				553197AF2058A5FD004A8352 /* CGFloat+RandomDecimal.swift */,
+				553197AC2058A5FC004A8352 /* CGPoint+Random.swift */,
+				553197B22058A5FD004A8352 /* SKAction+Repeat.swift */,
+				553197AE2058A5FD004A8352 /* UIColor+ChemicalFormula.swift */,
+				553197AA2058A5FC004A8352 /* UIColor+ColorSet.swift */,
+				553197AB2058A5FC004A8352 /* UIColor+Random.swift */,
+				553197B12058A5FD004A8352 /* UIColor+Subtraction.swift */,
+				553197AD2058A5FC004A8352 /* UIView+addSubviews.swift */,
+				553197B02058A5FD004A8352 /* UIView+constrainToEdges.swift */,
+				553197B32058A5FD004A8352 /* UIViewController+PresentAsPopUp.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -167,37 +198,6 @@
 				55658DEF20156EF10094F8EB /* Country.swift */,
 			);
 			path = "Data Structures";
-			sourceTree = "<group>";
-		};
-		55F66DAF20141F3900C4D621 /* FireworkGameScene */ = {
-			isa = PBXGroup;
-			children = (
-				5539FBDD2012B92300BACEBA /* FireworksScene.swift */,
-				55F66D9C2013D1CB00C4D621 /* Classic.sks */,
-				55F66DA42013F14100C4D621 /* Classic.wav */,
-				55F66DA820141B3F00C4D621 /* Crackle.sks */,
-				55F66DB62014383600C4D621 /* Crackle.wav */,
-				55F66DAA20141D0300C4D621 /* BigO.sks */,
-				55F66DB820143A1300C4D621 /* BigO.wav */,
-				55F66DB220142F0C00C4D621 /* RapidFire.sks */,
-				55F66DBA20143B8E00C4D621 /* RapidFire.wav */,
-				55F66D9A2013A30100C4D621 /* SparkEmitter.sks */,
-				55F66DA22013DE6100C4D621 /* SizzlingSparkSound.wav */,
-				55D8EBBA2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks */,
-			);
-			path = FireworkGameScene;
-			sourceTree = "<group>";
-		};
-		55F66DB020141F4E00C4D621 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				5539FBD5201289EE00BACEBA /* FireworksViewController.swift */,
-				5539FBD72012A34600BACEBA /* InstructionsController.swift */,
-				5539FBD92012B78400BACEBA /* FireworkPickerController.swift */,
-				55658DEB20155F930094F8EB /* CulturalExplorationViewController.swift */,
-				55C6337D2015FE8800C6ABFC /* CultureCollectionViewLayout.swift */,
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		55F66DB120141F6300C4D621 /* Supporting Files */ = {
@@ -270,19 +270,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F66DB72014383600C4D621 /* Crackle.wav in Resources */,
-				55F66DAB20141D0300C4D621 /* BigO.sks in Resources */,
-				55F66D9D2013D1CB00C4D621 /* Classic.sks in Resources */,
-				55F66DBB20143B8E00C4D621 /* RapidFire.wav in Resources */,
+				553197A62058A51B004A8352 /* RapidFire.sks in Resources */,
+				5531979F2058A51B004A8352 /* BigO.sks in Resources */,
+				553197A92058A51B004A8352 /* SparkEmitter.sks in Resources */,
+				553197A72058A51B004A8352 /* RapidFire.wav in Resources */,
+				553197A12058A51B004A8352 /* Classic.sks in Resources */,
+				553197A02058A51B004A8352 /* BigO.wav in Resources */,
+				553197A32058A51B004A8352 /* Crackle.sks in Resources */,
+				553197A42058A51B004A8352 /* Crackle.wav in Resources */,
+				553197A22058A51B004A8352 /* Classic.wav in Resources */,
 				5539FBC22012870700BACEBA /* LaunchScreen.storyboard in Resources */,
-				55F66DA32013DE6100C4D621 /* SizzlingSparkSound.wav in Resources */,
-				55F66DB320142F0C00C4D621 /* RapidFire.sks in Resources */,
-				55F66DA52013F14100C4D621 /* Classic.wav in Resources */,
-				55F66D9B2013A30100C4D621 /* SparkEmitter.sks in Resources */,
-				55D8EBBC2016E0AF00A46EF5 /* FireworkSmokeEmitter.sks in Resources */,
-				55F66DA920141B3F00C4D621 /* Crackle.sks in Resources */,
+				553197A52058A51B004A8352 /* FireworkSmokeEmitter.sks in Resources */,
+				553197A82058A51B004A8352 /* SizzlingSparkSound.wav in Resources */,
 				5539FBBF2012870700BACEBA /* Assets.xcassets in Resources */,
-				55F66DB920143A1300C4D621 /* BigO.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,31 +293,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C255B720151A590007632E /* UIColor+ColorSet.swift in Sources */,
-				55C255B12015103C0007632E /* CGFloat+Positive.swift in Sources */,
-				5539FBD02012873800BACEBA /* UIView+constrainToEdges.swift in Sources */,
-				5539FBDE2012B92300BACEBA /* FireworksScene.swift in Sources */,
 				5539FBD22012873800BACEBA /* GradientView.swift in Sources */,
-				55C255BB20151BED0007632E /* CGFloat+RandomDecimal.swift in Sources */,
+				553197BE2058A5FD004A8352 /* UIViewController+PresentAsPopUp.swift in Sources */,
+				553197802058A3E3004A8352 /* InstructionsController.swift in Sources */,
+				553197BB2058A5FD004A8352 /* UIView+constrainToEdges.swift in Sources */,
 				5539FBD12012873800BACEBA /* ColorPicker.swift in Sources */,
-				55F66DA12013D70900C4D621 /* SKAction+Repeat.swift in Sources */,
-				5539FBD82012A34600BACEBA /* InstructionsController.swift in Sources */,
+				553197B52058A5FD004A8352 /* UIColor+ColorSet.swift in Sources */,
+				553197B92058A5FD004A8352 /* UIColor+ChemicalFormula.swift in Sources */,
+				553197BA2058A5FD004A8352 /* CGFloat+RandomDecimal.swift in Sources */,
 				55658DF020156EF10094F8EB /* Country.swift in Sources */,
-				5539FBDA2012B78400BACEBA /* FireworkPickerController.swift in Sources */,
-				55C255B920151B4F0007632E /* UIColor+Random.swift in Sources */,
-				55C255B5201517C50007632E /* CGPoint+Random.swift in Sources */,
-				5539FBD6201289EE00BACEBA /* FireworksViewController.swift in Sources */,
+				5531977E2058A3E3004A8352 /* CulturalExplorationViewController.swift in Sources */,
+				553197BF2058A5FD004A8352 /* CGFloat+Positive.swift in Sources */,
 				55658DEE201565310094F8EB /* CultureExplorationCollectionViewCell.swift in Sources */,
-				55C6337E2015FE8800C6ABFC /* CultureCollectionViewLayout.swift in Sources */,
+				553197BC2058A5FD004A8352 /* UIColor+Subtraction.swift in Sources */,
 				5539FBCA2012871900BACEBA /* SizingView.swift in Sources */,
-				55C255B3201510640007632E /* UIColor+Subtraction.swift in Sources */,
-				55C255AF2014FECF0007632E /* UIColor+ChemicalFormula.swift in Sources */,
-				5539FBD32012873800BACEBA /* UIView+addSubviews.swift in Sources */,
+				553197B72058A5FD004A8352 /* CGPoint+Random.swift in Sources */,
+				553197B62058A5FD004A8352 /* UIColor+Random.swift in Sources */,
+				5531977F2058A3E3004A8352 /* FireworksViewController.swift in Sources */,
+				553197922058A43D004A8352 /* FireworksScene.swift in Sources */,
+				553197B82058A5FD004A8352 /* UIView+addSubviews.swift in Sources */,
 				5539FBD42012873800BACEBA /* ColorControlSlider.swift in Sources */,
+				553197BD2058A5FD004A8352 /* SKAction+Repeat.swift in Sources */,
 				5539FBB82012870700BACEBA /* AppDelegate.swift in Sources */,
-				55CB9CF22018228800AEE0F9 /* UIViewController+PresentAsPopUp.swift in Sources */,
-				55658DEC20155F930094F8EB /* CulturalExplorationViewController.swift in Sources */,
+				553197822058A3E3004A8352 /* FireworkPickerController.swift in Sources */,
 				5539FBDC2012B7BE00BACEBA /* Firework.swift in Sources */,
+				553197812058A3E3004A8352 /* CultureCollectionViewLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

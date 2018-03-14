@@ -44,10 +44,8 @@ class SizingView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setUpView()
         setUpSubviews()
-        backgroundColor = .clear
-        translatesAutoresizingMaskIntoConstraints = false
-        widthAnchor.constraint(equalTo: heightAnchor, multiplier: 0.3125).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -84,6 +82,12 @@ class SizingView: UIView {
     }
     
     // MARK: Private Functions
+    
+    private func setUpView() {
+        backgroundColor = .clear
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalTo: heightAnchor, multiplier: 0.3125).isActive = true
+    }
     
     private func setUpSubviews() {
         add(coverImageView, smallIndicatorLabel, mediumIndicatorLabel, largeIndicatorLabel)

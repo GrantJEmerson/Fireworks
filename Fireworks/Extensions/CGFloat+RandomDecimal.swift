@@ -12,4 +12,7 @@ extension CGFloat {
     static var randomDecimal: CGFloat {
         return CGFloat(arc4random_uniform(100))/100
     }
+    static func random(from lowerBound: CGFloat = 0, to higherBound: CGFloat) -> CGFloat {
+        return lowerBound + CGFloat(arc4random_uniform(UInt32(higherBound)))
+    }
 }

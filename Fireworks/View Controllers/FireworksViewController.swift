@@ -103,20 +103,20 @@ class FireworksViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .black
         setUpSubviews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setUpFireworksView()
-        let instructionsController = InstructionsController(withInstructions: " Bla Bla")
-        presentPopUp(instructionsController, withHeight: 180, by: sizingView)
     }
     
     // MARK: Selector Methods
     
     @objc private func presentFireworkPickerController() {
         let fireworkPickerController = FireworkPickerController()
+        fireworkPickerController.delegate = self
         presentPopUp(fireworkPickerController, withHeight: 180, by: fireworkSelectorButton)
     }
     
@@ -135,7 +135,6 @@ class FireworksViewController: UIViewController {
     // MARK: Private Functions
     
     private func setUpSubviews() {
-        view.backgroundColor = .black
         view.add(fireworksView, sizingView, colorPicker,
                  fireworkSelectorButton, chemicalFormulaLabel, buttonView)
         buttonView.add(autoPlayButton, culturalExplorationButton)
