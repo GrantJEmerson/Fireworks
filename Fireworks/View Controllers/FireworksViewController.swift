@@ -146,7 +146,7 @@ class FireworksViewController: UIViewController {
         
         NSLayoutConstraint.activate([
             sizingView.heightAnchor.constraint(equalToConstant: controlWidth),
-            sizingView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            sizingView.leadingAnchor.constraint(equalTo: view.safeAnchors?.leadingAnchor ?? view.leadingAnchor, constant: 10),
             sizingView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10),
             
             colorPicker.leadingAnchor.constraint(equalTo: sizingView.trailingAnchor),
@@ -165,7 +165,7 @@ class FireworksViewController: UIViewController {
             buttonView.heightAnchor.constraint(equalToConstant: 140),
             buttonView.widthAnchor.constraint(equalToConstant: 134),
             buttonView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            buttonView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            buttonView.trailingAnchor.constraint(equalTo: view.safeAnchors?.trailingAnchor ?? view.trailingAnchor),
             
             autoPlayButton.bottomAnchor.constraint(equalTo: buttonView.bottomAnchor, constant: -20),
             autoPlayButton.centerXAnchor.constraint(equalTo: buttonView.centerXAnchor),

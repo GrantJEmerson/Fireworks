@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 protocol ColorControlSliderDelegate: class {
     func colorControlSlider(_ colorControlSlider: ColorControlSlider, didChangeTo value: CGFloat)
 }
@@ -63,5 +62,5 @@ class ColorControlSlider: UISlider {
     @objc private func updateColor() {
         delegate?.colorControlSlider(self, didChangeTo: CGFloat(value))
     }
-
+    
 }

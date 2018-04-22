@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5521393C208D162900E804C9 /* UIView+SafeAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5521393B208D162900E804C9 /* UIView+SafeAnchors.swift */; };
 		5531977E2058A3E3004A8352 /* CulturalExplorationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553197792058A3E2004A8352 /* CulturalExplorationViewController.swift */; };
 		5531977F2058A3E3004A8352 /* FireworksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531977A2058A3E2004A8352 /* FireworksViewController.swift */; };
 		553197802058A3E3004A8352 /* InstructionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531977B2058A3E3004A8352 /* InstructionsController.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5521393B208D162900E804C9 /* UIView+SafeAnchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeAnchors.swift"; sourceTree = "<group>"; };
 		553197792058A3E2004A8352 /* CulturalExplorationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulturalExplorationViewController.swift; sourceTree = "<group>"; };
 		5531977A2058A3E2004A8352 /* FireworksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireworksViewController.swift; sourceTree = "<group>"; };
 		5531977B2058A3E3004A8352 /* InstructionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5521393D208D163100E804C9 /* UIView Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				553197AD2058A5FC004A8352 /* UIView+addSubviews.swift */,
+				553197B02058A5FD004A8352 /* UIView+constrainToEdges.swift */,
+				553197B32058A5FD004A8352 /* UIViewController+PresentAsPopUp.swift */,
+				5521393B208D162900E804C9 /* UIView+SafeAnchors.swift */,
+			);
+			path = "UIView Extensions";
+			sourceTree = "<group>";
+		};
+		5521393E208D164300E804C9 /* UIColor Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				553197AE2058A5FD004A8352 /* UIColor+ChemicalFormula.swift */,
+				553197AA2058A5FC004A8352 /* UIColor+ColorSet.swift */,
+				553197AB2058A5FC004A8352 /* UIColor+Random.swift */,
+				553197B12058A5FD004A8352 /* UIColor+Subtraction.swift */,
+			);
+			path = "UIColor Extensions";
+			sourceTree = "<group>";
+		};
+		5521393F208D165400E804C9 /* Core Graphics Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				553197B42058A5FD004A8352 /* CGFloat+Positive.swift */,
+				553197AF2058A5FD004A8352 /* CGFloat+RandomDecimal.swift */,
+				553197AC2058A5FC004A8352 /* CGPoint+Random.swift */,
+			);
+			path = "Core Graphics Extensions";
+			sourceTree = "<group>";
+		};
+		55213940208D165F00E804C9 /* Sprite Kit Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				553197B22058A5FD004A8352 /* SKAction+Repeat.swift */,
+			);
+			path = "Sprite Kit Extensions";
+			sourceTree = "<group>";
+		};
 		553197852058A422004A8352 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,17 +206,10 @@
 		55F66DAC20141EEE00C4D621 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				553197B42058A5FD004A8352 /* CGFloat+Positive.swift */,
-				553197AF2058A5FD004A8352 /* CGFloat+RandomDecimal.swift */,
-				553197AC2058A5FC004A8352 /* CGPoint+Random.swift */,
-				553197B22058A5FD004A8352 /* SKAction+Repeat.swift */,
-				553197AE2058A5FD004A8352 /* UIColor+ChemicalFormula.swift */,
-				553197AA2058A5FC004A8352 /* UIColor+ColorSet.swift */,
-				553197AB2058A5FC004A8352 /* UIColor+Random.swift */,
-				553197B12058A5FD004A8352 /* UIColor+Subtraction.swift */,
-				553197AD2058A5FC004A8352 /* UIView+addSubviews.swift */,
-				553197B02058A5FD004A8352 /* UIView+constrainToEdges.swift */,
-				553197B32058A5FD004A8352 /* UIViewController+PresentAsPopUp.swift */,
+				5521393F208D165400E804C9 /* Core Graphics Extensions */,
+				55213940208D165F00E804C9 /* Sprite Kit Extensions */,
+				5521393E208D164300E804C9 /* UIColor Extensions */,
+				5521393D208D163100E804C9 /* UIView Extensions */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -238,7 +273,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Grant Emerson";
 				TargetAttributes = {
 					5539FBB32012870700BACEBA = {
@@ -301,6 +336,7 @@
 				553197B52058A5FD004A8352 /* UIColor+ColorSet.swift in Sources */,
 				553197B92058A5FD004A8352 /* UIColor+ChemicalFormula.swift in Sources */,
 				553197BA2058A5FD004A8352 /* CGFloat+RandomDecimal.swift in Sources */,
+				5521393C208D162900E804C9 /* UIView+SafeAnchors.swift in Sources */,
 				55658DF020156EF10094F8EB /* Country.swift in Sources */,
 				5531977E2058A3E3004A8352 /* CulturalExplorationViewController.swift in Sources */,
 				553197BF2058A5FD004A8352 /* CGFloat+Positive.swift in Sources */,
@@ -349,6 +385,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -356,6 +393,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -406,6 +444,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -413,6 +452,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
